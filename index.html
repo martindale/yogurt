@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>rpg mockup</title>
+  <style type="text/css">
+    body {
+      /* Allow canvas to hit the edges of the browser viewport. */
+      margin: 0;
+    }
+
+    #screen canvas {
+      margin: auto;
+
+      /* Hide the gap for font descenders. */
+      display: block;
+
+      /* disable scaling interpolation */
+      image-rendering: optimizeSpeed;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -o-crisp-edges;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: optimize-contrast;
+      image-rendering: pixelated;
+      -ms-interpolation-mode: nearest-neighbor;
+    }
+  </style>
+  
+</head>
+<body>
+  <div id="screen"></div>
+  <script src="node_modules/melonjs/build/melonjs.js"></script>
+  
+  <!-- Plugin(s) -->
+  <script type="text/javascript" src="assets/plugins/debug/debugPanel.js"></script>
+
+  <!-- Game Scripts -->
+  <script type="text/javascript" src="assets/game.js"></script>
+  <script type="text/javascript" src="assets/resources.js"></script>
+
+  <script type="text/javascript" src="assets/entities/entities.js"></script>
+
+  <script type="text/javascript" src="assets/screens/play.js"></script>
+
+  <!-- Bootstrap -->
+  <script type="text/javascript">
+      window.onReady(function onReady() {
+          game.onload();
+      });
+  </script>
+</body>
+</html>
