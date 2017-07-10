@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/martindale/yogurt#readme",
   "dependencies": {
-    "melonjs": "^4.1.1",
+    "melonjs": "github:martindale/melonjs#maki",
     "physicsjs": "^0.7.0"
   }
 }
